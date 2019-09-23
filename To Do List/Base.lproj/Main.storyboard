@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="NyL-5l-9na" kind="show" identifier="Edititem" id="r46-Wy-vNj"/>
+                                            <segue destination="NyL-5l-9na" kind="show" identifier="EditItem" id="r46-Wy-vNj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -88,13 +88,18 @@
                                 <action selector="cancelPressed:" destination="NyL-5l-9na" id="uG8-75-ciT"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eQR-C8-Pdy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eQR-C8-Pdy">
+                            <connections>
+                                <segue destination="j3t-ge-f0O" kind="unwind" identifier="UnwindFromSave" unwindAction="unwindFromDetailViewControllerWithSegue:" id="97N-AB-WKc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="toDoField" destination="zM9-b6-EOh" id="bLj-IB-uj4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwC-k2-p20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="j3t-ge-f0O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2767" y="102"/>
         </scene>
